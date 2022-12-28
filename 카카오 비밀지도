@@ -1,0 +1,33 @@
+int n=5;
+        int []num=new int[n];
+        int[] arr1={9,20,28,18,11},arr2={30,1,21,17,28};
+        String answer[]=new String[n];
+
+        for(int i=0;i<n;i++)
+            answer[i]="";
+
+        for(int i=0;i<n;i++) {
+            num[i] = arr1[i]|arr2[i];
+        }
+
+
+        for(int i=0;i<n;i++) {
+
+            for(int ii=0;ii<n;ii++) {
+
+                if('1'==Integer.toBinaryString(num[i]).charAt(ii))
+                {
+                    answer[i]+="#";
+                }
+                if('0'==Integer.toBinaryString(num[i]).charAt(ii))
+                {
+                    answer[i]+=" ";
+                }
+            }
+        }
+
+
+        for(int i=0;i<n;i++)
+        {
+            System.out.println(answer[i]);
+        }
