@@ -1,33 +1,46 @@
-int n=5;
-        int []num=new int[n];
-        int[] arr1={9,20,28,18,11},arr2={30,1,21,17,28};
-        String answer[]=new String[n];
+int n = 5;
+        int[] num = new int[n];
+        int[] arr1 = {9,20,28,18,11}, arr2 = {30,1,21,17,28};
+        String answer1[]=new String[n];
+        String answer[] = new String[n];
 
-        for(int i=0;i<n;i++)
-            answer[i]="";
+        for (int i = 0; i < n; i++)
+            answer[i] = "";
 
-        for(int i=0;i<n;i++) {
-            num[i] = arr1[i]|arr2[i];
+        for (int i = 0; i < n; i++) {
+            num[i] = arr1[i] | arr2[i];
         }
 
+        for (int i = 0; i < n; i++) {
 
-        for(int i=0;i<n;i++) {
+            if (Integer.toBinaryString(num[i]).length() < n) {
 
-            for(int ii=0;ii<n;ii++) {
+                answer1[i] = String.format("0%s", Integer.toBinaryString(num[i]));
+            } else {
+                answer1[i] = Integer.toBinaryString(num[i]);
+            }
 
-                if('1'==Integer.toBinaryString(num[i]).charAt(ii))
-                {
-                    answer[i]+="#";
+        }
+        for(int i=0;i<n;i++)
+        {
+            while (answer1[i].length() < n)
+            {
+                answer1[i] = String.format("0%s", answer1[i]);
+
+            }
+
+        }
+        for (int i = 0; i < n; i++) {
+
+            for (int ii = 0; ii < n; ii++) {
+
+                if ('1' == answer1[i].charAt(ii)) {
+                    answer[i] += "#";
                 }
-                if('0'==Integer.toBinaryString(num[i]).charAt(ii))
-                {
-                    answer[i]+=" ";
+                if ('0' == answer1[i].charAt(ii)) {
+                    answer[i] += " ";
                 }
             }
         }
-
-
         for(int i=0;i<n;i++)
-        {
             System.out.println(answer[i]);
-        }
