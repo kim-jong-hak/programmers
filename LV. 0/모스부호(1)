@@ -1,0 +1,58 @@
+
+
+        for(int i=0;i<mos.length;i++) {
+            if (mos[i].equals(".-"))
+                message += 'a';
+            if (mos[i].equals("-..."))
+                message += 'b';
+            if (mos[i].equals("-.-." ))
+                message += 'c';
+            if (mos[i].equals("-.."))
+                message += 'd';
+            if (mos[i].equals("." ))
+                message += 'e';
+            if (mos[i].equals("..-."))
+                message += 'f';
+            if (mos[i].equals("--."))
+                message += 'g';
+            if (mos[i].equals("...." ))
+                message += 'h';
+            if (mos[i].equals(".." ))
+                message += 'i';
+            if (mos[i].equals(".---"))
+                message += 'j';
+            if (mos[i].equals("-.-"))
+                message += 'k';
+            if (mos[i].equals(".-.."))
+                message += 'l';
+            if (mos[i].equals("--"))
+                message += 'm';
+            if (mos[i].equals("-."))
+                message += 'n';
+            if (mos[i].equals("---"))
+                message += 'o';
+            if (mos[i].equals(".--."))
+                message += 'p';
+            if (mos[i].equals("--.-"))
+                message += 'q';
+            if (mos[i].equals(".-."))
+                message += 'r';
+            if (mos[i].equals("..."))
+                message += 's';
+            if (mos[i].equals("-" ))
+                message += 't';
+            if (mos[i].equals("..-"))
+                message += 'u';
+            if (mos[i].equals("...-"))
+                message += 'v';
+            if (mos[i].equals(".--"))
+                message += 'w';
+            if (mos[i].equals("-..-"))
+                message += 'x';
+            if (mos[i].equals("-.--"))
+                message += 'y';
+            if (mos[i].equals("--.."))
+                message += 'z';
+        }
+
+        return message;
